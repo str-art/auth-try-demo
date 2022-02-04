@@ -26,7 +26,7 @@ export class Card {
     @ManyToOne(() => Columns, columns => columns.cards)
     columns: Columns;
 
-    @OneToMany(()=>Comments, comments => comments.card)
+    @OneToMany(()=>Comments, comments => comments.card,{cascade: ['remove']})
     @JoinColumn()
     comments: Comments[]
     

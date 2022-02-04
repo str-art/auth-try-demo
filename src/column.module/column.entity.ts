@@ -11,7 +11,7 @@ export class Columns{
     @Column()
     name: string;
     
-    @OneToMany(()=> Card, card => card.columns, {cascade: ['insert','update']})
+    @OneToMany(()=> Card, card => card.columns, {cascade: ['remove']})
     @JoinColumn()
     cards: Card[];
     
